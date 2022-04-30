@@ -16,6 +16,8 @@ public class Program {
 
         Locale.setDefault(Locale.US);
         Scanner teclado = new Scanner(System.in);
+        
+        //Declaração da Classe de Data
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         System.out.print("Enter department's name: ");
@@ -24,8 +26,10 @@ public class Program {
         System.out.println("Enter worker data: ");
         System.out.print("Name: ");
         String workerName = teclado.nextLine();
+        
         System.out.print("Level: ");
         String workerLevel = teclado.nextLine();
+        
         System.out.print("Base salary: ");
         double baseSalary = teclado.nextDouble();
         
@@ -38,8 +42,10 @@ public class Program {
             System.out.println("Enter contract #" + i + " data");
             System.out.print("Date (DD/MM/YYYY): ");
             Date contractDate = sdf.parse(teclado.next());
+            
             System.out.print("Value per hour: ");
             double valuePerHour = teclado.nextDouble();
+            
             System.out.print("Duration (hours): ");
             int hours = teclado.nextInt();
             
@@ -52,7 +58,7 @@ public class Program {
         System.out.print("Enter month and year to calculate income (MM/YYYY): ");
         String monthAndYear = teclado.next();
         int month = Integer.parseInt(monthAndYear.substring(0, 2));
-        int year = Integer.parseInt(monthAndYear.substring(3, 6));
+        int year = Integer.parseInt(monthAndYear.substring(3));
         
         System.out.println("Name: " + worker.getName());
         System.out.println("Department: " + worker.getDepartment().getName());
